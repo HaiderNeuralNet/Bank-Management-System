@@ -9,7 +9,12 @@ from bank import (
 )
 
 # ─── Page Config ───────────────────────────────────────────────────────────────
-st.set_page_config(page_title="Haider's Bank", page_icon="🏦", layout="centered")
+st.set_page_config(
+    page_title="Haider's Bank",
+    page_icon="🏦",
+    layout="centered",
+    initial_sidebar_state="expanded"          
+)
 
 # ─── Custom CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
@@ -108,6 +113,11 @@ label, .stTextInput label, .stNumberInput label,
     gap: 0.5rem !important;
 }
 
+/* ── HIDE SIDEBAR COLLAPSE BUTTON (FIXED SIDEBAR) ── */
+[data-testid="stSidebarCollapseButton"] {
+    display: none !important;
+}
+
 /* ── Page headings ── */
 h1, h2, h3 { color:#1e1b4b !important; }
 
@@ -120,7 +130,6 @@ p, li, span { color:#1e1b4b; }
 st.markdown('<div class="hero"><h1>Haider Bank</h1><p>Modern Banking · Secure · Simple</p></div>', unsafe_allow_html=True)
 
 # ─── Sidebar ───────────────────────────────────────────────────────────────────
-# IMPORTANT: Use single spaces only — extra spaces cause menu matching to fail
 MENU_OPTIONS = [
     "🆕 Create Account",
     "💰 Deposit Money",
