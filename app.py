@@ -77,12 +77,36 @@ label, .stTextInput label, .stNumberInput label,
 [data-baseweb="form-control-label"] {
     color:#1e1b4b !important; font-weight:600 !important; font-size:0.95rem !important; }
 
-/* ── Sidebar ── */
+/* ── Sidebar (Enhanced) ── */
 [data-testid="stSidebar"] { background:#ffffff !important; border-right:2px solid #c7d2fe !important; }
 [data-testid="stSidebar"] * { color:#1e1b4b !important; }
 [data-testid="stSidebar"] h3 { color:#4f46e5 !important; font-weight:800 !important; }
 [data-testid="stSidebar"] hr { border-color:#c7d2fe !important; }
-[data-testid="stSidebar"] .stRadio label { font-size:0.97rem !important; font-weight:600 !important; }
+
+/* Sidebar radio menu – improved visibility */
+[data-testid="stSidebar"] .stRadio label {
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #1e1b4b !important;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 10px !important;
+    transition: background 0.2s ease;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    font-family: 'Syne', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif !important;
+}
+
+[data-testid="stSidebar"] .stRadio label:hover {
+    background: #eef2ff !important;
+}
+
+[data-testid="stSidebar"] .stRadio [data-testid="stMarkdownContainer"] p {
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
 
 /* ── Page headings ── */
 h1, h2, h3 { color:#1e1b4b !important; }
